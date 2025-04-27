@@ -11,10 +11,14 @@
             "id": "801272a522175db5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "FrontEnd/FrameWork/React/무제.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "무제"
             }
           }
         ]
@@ -154,12 +158,12 @@
               "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 416.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -172,20 +176,23 @@
       "templates:템플릿 삽입": false
     }
   },
-  "active": "801272a522175db5",
+  "active": "81c8427f2cb91cc8",
   "lastOpenFiles": [
+    "FrontEnd/PWA",
+    "FrontEnd/FrameWork/Next.js",
+    "FrontEnd/FrameWork",
     "새 텍스트 문서.txt",
     "gitignore.md",
     "Attachment/Backgrounds/castorice.webp",
     "Attachment/Backgrounds/t1.webp",
     "Attachment/Backgrounds/t3.webp",
     "Attachment/Backgrounds/t2.webp",
-    "FrontEnd/React/무제.md",
+    "FrontEnd/FrameWork/React/무제.md",
     "Attachment/Backgrounds",
     "Attachment",
     "무제.canvas",
     "2025-04-27.md",
-    "FrontEnd/React",
+    "FrontEnd/FrameWork/React",
     "FrontEnd"
   ]
 }
