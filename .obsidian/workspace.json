@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "721fa1b8d6f43172",
+        "id": "96d1bab69b3c8608",
         "type": "tabs",
         "children": [
           {
-            "id": "f6197f97fd0d2a88",
+            "id": "801272a522175db5",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -90,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Attachment/Backgrounds/t3.webp",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "t3 의 백링크"
+              "title": "백링크"
             }
           },
           {
@@ -109,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Attachment/Backgrounds/t3.webp",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "t3 의 나가는 링크"
+              "title": "나가는 링크"
             }
           },
           {
@@ -138,13 +136,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Attachment/Backgrounds/t3.webp",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "t3 의 개요"
+              "title": "개요"
             }
           },
           {
@@ -175,12 +172,14 @@
       "templates:템플릿 삽입": false
     }
   },
-  "active": "81c8427f2cb91cc8",
+  "active": "801272a522175db5",
   "lastOpenFiles": [
-    "Attachment/Backgrounds/t2.webp",
-    "Attachment/Backgrounds/t3.webp",
+    "새 텍스트 문서.txt",
+    "gitignore.md",
     "Attachment/Backgrounds/castorice.webp",
     "Attachment/Backgrounds/t1.webp",
+    "Attachment/Backgrounds/t3.webp",
+    "Attachment/Backgrounds/t2.webp",
     "FrontEnd/React/무제.md",
     "Attachment/Backgrounds",
     "Attachment",
