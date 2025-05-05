@@ -32,3 +32,58 @@ const socket = new WebSocket("ws://www.test.com")
 WebSocket 객체를 통해 4종류의 이벤트를 다룰 수 있습니다.
 
 ### open, message, error, close
+
+```js
+socket.onopen = (event) => {
+  console.log("서버와 연결.");
+};
+
+socket.onmessage = (event) => {
+  console.log("서버에서 받은 메시지:", event.data);
+};
+
+socket.onerror = (event) => {
+  console.error("에러:", event);
+};
+
+socket.onclose = (event) => {
+  console.log("서버와 연결 종료.");
+};
+```
+
+### send
+```js
+socket.send("서버 하이.")
+```
+
+## WebSocket Server
+---
+
+### Node.js
+```js
+const WebSocket = require("ws");
+
+const wss = new WebSocket.Server({ port: 8080 });
+
+wss.on("connection", (socket) => {
+  console.log("클라이언트가 접속하였습니다.");
+
+  socket.on("message", (message) => {
+    console.log("받은 메세지:", message);
+    socket.send("메세지 잘 받았습니다!");
+  });
+
+  socket.on("close", () => {
+    console.log("클라이언트가 접속을 끊었습니다.");
+  });
+});
+```
+
+## 라이브러리
+---
+### [[Socket.io]]
+
+
+## 참고 자료
+---
+[WebSocket](https://www.daleseo.com/websocket/)
