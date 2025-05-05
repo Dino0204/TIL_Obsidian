@@ -27,3 +27,8 @@ Sec-WebSocket-Version: 13
 ```js
 const socket = new WebSocket("ws://www.test.com")
 ```
+
+
+WebSocket 객체를 통해 4종류의 이벤트를 다룰 수 있습니다.
+
+### open, message, error, close
