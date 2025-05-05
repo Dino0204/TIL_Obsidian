@@ -12,3 +12,5 @@ npm add socket.io
 ---
 ### HandShake
 node:http 모듈로 HTTP 서버를 생성 후 socket.io 모듈의 Server 클래스를 이용하여 WebSocket 서버를 생성한다.
+
+
