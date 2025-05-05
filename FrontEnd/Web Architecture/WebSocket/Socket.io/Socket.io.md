@@ -14,3 +14,6 @@ npm add socket.io
 node:http 모듈로 HTTP 서버를 생성 후 socket.io 모듈의 Server 클래스를 이용하여 WebSocket 서버를 생성한다.
 
 
+## 참고 자료
+---
+https://www.daleseo.com/socket-io/
