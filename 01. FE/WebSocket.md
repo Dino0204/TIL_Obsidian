@@ -66,9 +66,9 @@ socket.send("서버 하이.")
 ```js
 const WebSocket = require("ws");
 
-const wss = new WebSocket.Server({ port: 8080 });
+const ws_server = new WebSocket.Server({ port: 8080 });
 
-wss.on("connection", (socket) => {
+ws_server.on("connection", (socket) => {
   console.log("클라이언트가 접속하였습니다.");
 
   socket.on("message", (message) => {
