@@ -24,6 +24,9 @@ Sec-WebSocket-Version: 13
 ---
 본격적으로 Client에서 WebSocket을 사용해봅시다. WebSocket 통신을 하기 위해서는 http가 아닌  ws, wss Protocol을 사용하여 서버의 URL을 넘겨주어야 합니다.
 
+ws vs wss
+wss는 ssl인증서로 암호화된 ws
+
 ```js
 const socket = new WebSocket("ws://www.test.com")
 ```
