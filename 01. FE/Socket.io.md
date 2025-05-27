@@ -27,26 +27,39 @@ WebSocket에서는 일일이 개발하여 사용해야 하는 기능들을 많�
 대표적으로 room 기능이 있다. 다양한 기능들을 더 알아보고 싶다면 [공식문서](https://socket.io/docs/v4/)를 참고하자.
 
 
-
-
 ## 설치
 ---
 ```bash
 npm i socket.io
 ```
 
-## 요소
+## Socket.io Admin UI
 ---
-### Adapter
-1. rooms
-2. socket id
-3. 
+[Admin UI](https://admin.socket.io/#/) 이 주소에서 나의 사이트에 대한 통계 분석 자료를 확인할 수 있다.
+접속한 Client, 생성된 Rooms(private 포함)등등...
 
 
-## 서버 구성
----
-### HandShake
-node:http 모듈로 HTTP 서버를 생성 후 socket.io 모듈의 Server 클래스를 이용하여 WebSocket 서버를 생성한다.
+### 설치
+```bash
+npm i @socket.io/admin-ui
+```
+
+### 설정
+```js
+import { instrument } from "@socket.io/admin-ui";
+
+const wsServer = new Server(httpServer, {
+  cors: {
+    origin: ["https://admin.socket.io"],
+    credentials: true,
+  },
+});
+
+instrument(wsServer, {
+  auth: false,
+});
+```
+
 
 
 ## 참고 자료
