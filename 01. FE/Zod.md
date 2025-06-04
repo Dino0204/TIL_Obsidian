@@ -92,9 +92,24 @@ ZodError: [
 ];
 ```
 
-###  `safeParse()`
- 결과와 함께 성공 여부인 `success: boolean`를 반환 한다.
+검증 성공 시 반환 객체에는 검증에 통과한 속성만 포함된다.
+-> 스키마에 정의되지 않은 속성을 포함시켰을 때 스키마에 정의한 대로 출력되는 모습을 볼 수 있다.
+```ts
+try {
+  const user = UserSchema.parse({
+    name: 'John',
+    age: 20,
+    email: 'john@example.com',
+  })
+} catch (error) {
+  if (error instanceof z.ZodError) {
+    console.log(error.issues)
+  }
+}
 
+// return -> { age: 20, name: "John" }
+```
+### `safeParse()`
 ```ts
 const user_safe = UserSchema.safeParse({
   name: 'John',
@@ -107,6 +122,8 @@ if(!user_safe.success){
 	user_safe.data // data...
 }
 ```
+
+ 결과와 함께 성공 여부인 `success: boolean`를 반환 한다.
 
 ### `asyncParse(), asyncSafeParse()`
 비듕기적으로 파싱해야하는 상황(API...) 에 쓰인다.
