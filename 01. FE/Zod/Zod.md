@@ -18,7 +18,7 @@ TypeScript는 컴파일 과정에서만 동작하기 때문에 실제 프로그�
 ## 설치
 ---
 
-```bash
+```
 npm i zod
 ```
 
@@ -160,3 +160,4 @@ const Auth = (user: User) => {
 https://zod.dev
 https://www.daleseo.com/?tag=Zod
 https://mycodings.fly.dev/blog/2025-04-19-ultimate-zod-v-4-guide-for-typescript-developers
+https://jforj.tistory.com/380
