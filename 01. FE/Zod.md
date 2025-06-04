@@ -1,5 +1,10 @@
-TypeScript 우선 스키마 검증 라이브러리
+[[TypeScript]] 우선 스키마 검증 라이브러리
 문자열부터 중첩 객체에 이르기까지 다양한 데이터의 유효성을 검증하는데 사용하는 스키마를 정의할 수  있다.
+
+## Zod를 사용해야 하는 이유?
+---
+TypeScript는 컴파일 과정에서만 동작하기 때문에 실제 프로그램이 실행 될 때 유효성을 보장할 수 없다.
+따라서 유효성 검증 로직을 직접 구현하게 되는데 이처럼 기존의 방식은 굉장히 번거롭다. 따라서 런타임에서 동작하는 유효성 검증인 Zod를 사용해야 한다.
 
 ## 특징
 ---
@@ -40,8 +45,10 @@ TypeScript v5.5 이상 버전을 공식적으로 지원함
 }
 ```
 
-## 스키마 정의
+## [[스키마]] 정의
 ---
+사용할 데이터의 구조를 정의해준다.
+
 ```ts
 import { z } from 'zod'
 
@@ -51,12 +58,11 @@ const UserSchema = z.object({
 })
 ```
 
-## 데이터 파싱과 에러 핸들링
+## 유호성 검증과 에러 핸들링
 ---
 Zod 스키마가 주어질 때 `.parse`를 사용하여 사용자 입력의 유효성을 검사하면 사용자 입력의 깊은 복사본을 반환한다. 
 
 ### `parse()`
-검증 실패 시 `ZodError instance`를 던진다.
 ```ts
 try {
   const user = UserSchema.parse({
@@ -71,6 +77,20 @@ try {
 }
 ```
 
+검증 실패 시 `ZodError instance`를 던진다.
+-> 정확히 어느 부분에서 어떤 검증을 실패하였는지 알려준다!
+```ts
+ZodError: [
+  {
+    code: "invalid_type",
+    expected: "string",
+    received: "number",
+    path: ["name"],
+    message: "Expected string, received number",
+  }
+  ...
+];
+```
 
 ###  `safeParse()`
  결과와 함께 성공 여부인 `success: boolean`를 반환 한다.
@@ -94,3 +114,6 @@ if(!user_safe.success){
 ```ts
 ```
 
+## 참고 자료
+---
+https://www.daleseo.com/?tag=Zod
