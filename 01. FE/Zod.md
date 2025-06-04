@@ -125,6 +125,20 @@ if(!user_safe.success){
 
  결과와 함께 성공 여부인 `success: boolean`를 반환 한다.
 
+```json
+ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "age"
+    ],
+    "message": "Expected number, received string"
+  }
+]
+```
+
 ### `asyncParse(), asyncSafeParse()`
 비듕기적으로 파싱해야하는 상황(API...) 에 쓰인다.
 
