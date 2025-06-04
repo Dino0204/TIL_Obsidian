@@ -11,15 +11,11 @@ TypeScript는 컴파일 과정에서만 동작하기 때문에 실제 프로그�
 런타임 검증: 컴파일 타임에만 타입을 검사하는 TypeScript의 타입 시스템을 런타임으로 확장
 -> ex) API 응답, 사용자 입력은 런타임에 따라 결정되기 때문에 런타임 시 검증해야 안전하다.
 
-외부 종속성 없음
-
-작은 번들 크기: 2kb
-
-간결한 인터페이스
-
-TypeScript및 JavaScript와 호환
-
-내장 JSON 스키마 변환
+1. 외부 종속성 없음
+2. 작은 번들 크기: 2kb
+3. 간결한 인터페이스
+4. TypeScript및 JavaScript와 호환
+5. 내장 JSON 스키마 변환
 
 ## 설치
 ---
@@ -30,9 +26,9 @@ npm i zod
 
 ## 요구 사항
 ---
-TypeScript v5.5 이상 버전을 공식적으로 지원함
+TypeScript v5.5 이상 버전
 
-`tsconfig.json`의 `strict` 모드를 활성화해야함
+`tsconfig.json`의 `strict` 모드를 활성화
 
 ```json
 // tsconfig.json
@@ -88,7 +84,6 @@ ZodError: [
     path: ["name"],
     message: "Expected string, received number",
   }
-  ...
 ];
 ```
 
@@ -124,26 +119,65 @@ if(!user_safe.success){
 ```
 
  결과와 함께 성공 여부인 `success: boolean`를 반환 한다.
-
-```json
-ZodError: [
-  {
-    "code": "invalid_type",
-    "expected": "number",
-    "received": "string",
-    "path": [
-      "age"
-    ],
-    "message": "Expected number, received string"
-  }
-]
+ ```json
+ {
+	error: (...),
+	success: false
+ }
 ```
 
-### `asyncParse(), asyncSafeParse()`
-비듕기적으로 파싱해야하는 상황(API...) 에 쓰인다.
+## 타입 추론
+---
+스키마를 기준으로 TypeScript 타입을 추론해준다. 
+
+### `기존 TS`
+```ts
+interface User {
+	email: string,
+	password: number
+}
+
+const Auth = (user: User) => {
+	User.parse(user)
+}
+```
+
+### `Zod 타입 추론`
+`infer`와 `typeof`를 사용하여 정의된 스키마로부터 타입 추론을 할 수 있다.
+```ts
+type User = z.infer<typeof User>
+
+const Auth = (user: User) => {
+	User.parse(user)
+}
+```
+
+## 자료형
+---
+### 기본 자료형 명시
+스키마를 정의할 때 자료형을 명시하는데 이 때 검증자 함수를 이용하여 명시할 수 있다.
+JS의 기본 타입뿐만 아니라 Date와 같은 내장 클래스 타입 또한 지원한다.
 
 ```ts
+const UserSchema = z.object({
+  name: z.string(),
+  age: z.number(),
+  createdAt: z.date(),
+})
 ```
+
+### 필수/선택
+`optional` 검증자를 사용하여 선택 입력을 사용할 수 있다.
+```ts
+const UserSchema = z.object({
+  name: z.string(),
+  age: z.number().optional(),
+  createdAt: z.date(),
+})
+```
+
+### 기본값
+`de`
 
 ## 참고 자료
 ---
