@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"d80fbc55b4a9d358","type":"file","file":"Resources/01. FE/WebSocket.md","x":-440,"y":-1200,"width":400,"height":400},
+		{"id":"d1f83a86f28703f2","type":"file","file":"Resources/01. FE/Socket.io.md","x":140,"y":-1200,"width":400,"height":400},
+		{"id":"0a7021fd0c601c30","type":"file","file":"Resources/01. FE/Zod/Zod.md","x":-1900,"y":-1220,"width":400,"height":400},
+		{"id":"fba468ffe71d92a9","type":"file","file":"Resources/01. FE/TypeScript.md","x":-1500,"y":-1800,"width":400,"height":400},
+		{"id":"f4283df6d2b62e39","type":"file","file":"Resources/01. FE/Axios/Axios.md","x":-1240,"y":-1220,"width":400,"height":400},
+		{"id":"4b7fad85a686e6d5","type":"file","file":"Resources/02. BE/Node.js/Node.js.md","x":-540,"y":-1920,"width":400,"height":400},
+		{"id":"ac27df1cc704e71d","type":"file","file":"Resources/01. FE/React-Cookie.md","x":140,"y":-1720,"width":400,"height":400},
+		{"id":"8de10a77a9fd67b7","type":"file","file":"Resources/03. DB/데이터 모델링/데이터 모델링.md","x":-800,"y":-2480,"width":400,"height":400},
+		{"id":"f947d10638528c8f","type":"file","file":"Resources/03. DB/스키마/스키마.md","x":-140,"y":-2480,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"2df9e40df187bf72","fromNode":"d80fbc55b4a9d358","fromSide":"right","toNode":"d1f83a86f28703f2","toSide":"left"},
+		{"id":"b41b164f7fe12646","fromNode":"4b7fad85a686e6d5","fromSide":"bottom","toNode":"d80fbc55b4a9d358","toSide":"top"},
+		{"id":"d18abf026c01fa01","fromNode":"fba468ffe71d92a9","fromSide":"bottom","toNode":"0a7021fd0c601c30","toSide":"top"},
+		{"id":"dac495b80205f149","fromNode":"fba468ffe71d92a9","fromSide":"bottom","toNode":"f4283df6d2b62e39","toSide":"top"},
+		{"id":"a82c927234016474","fromNode":"fba468ffe71d92a9","fromSide":"right","toNode":"d80fbc55b4a9d358","toSide":"left"},
+		{"id":"f0e05da0d536ea2c","fromNode":"d1f83a86f28703f2","fromSide":"top","toNode":"ac27df1cc704e71d","toSide":"bottom"},
+		{"id":"9b58db76f855fb7b","fromNode":"8de10a77a9fd67b7","fromSide":"right","toNode":"f947d10638528c8f","toSide":"left"},
+		{"id":"c7b64aa7a3992cb8","fromNode":"4b7fad85a686e6d5","fromSide":"top","toNode":"8de10a77a9fd67b7","toSide":"bottom"},
+		{"id":"1be035890e9bb6d1","fromNode":"4b7fad85a686e6d5","fromSide":"top","toNode":"f947d10638528c8f","toSide":"bottom"}
+	]
+}
