@@ -116,11 +116,16 @@ Biome을 자동화 도구로 사용하기 위해서 규칙을 한번에 적용�
 }
 ```
 
+![[Pasted image 20250623193512.png]]
+
 ### Biome Caching
 변경된 부분만을 빠르게 처리할 수 있다.
+`C:\Users\<UserName>\AppData\Local\biomejs\biome\cache`
 ```node
 biome explain daemon-logs
 ```
+
+
 
 ## 참고 자료
 ---
