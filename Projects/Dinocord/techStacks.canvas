@@ -8,7 +8,7 @@
 		{"id":"4b7fad85a686e6d5","type":"file","file":"Resources/02. BE/Node.js/Node.js.md","x":-540,"y":-1920,"width":400,"height":400},
 		{"id":"ac27df1cc704e71d","type":"file","file":"Inbox/React-Cookie.md","x":140,"y":-1720,"width":400,"height":400},
 		{"id":"8de10a77a9fd67b7","type":"file","file":"Resources/03. DB/데이터 모델링/데이터 모델링.md","x":-800,"y":-2480,"width":400,"height":400},
-		{"id":"f947d10638528c8f","type":"file","file":"Resources/03. DB/스키마/스키마.md","x":-140,"y":-2480,"width":400,"height":400}
+		{"id":"f947d10638528c8f","type":"file","file":"Resources/03. DB/스키마.md","x":-140,"y":-2480,"width":400,"height":400}
 	],
 	"edges":[
 		{"id":"2df9e40df187bf72","fromNode":"d80fbc55b4a9d358","fromSide":"right","toNode":"d1f83a86f28703f2","toSide":"left"},
