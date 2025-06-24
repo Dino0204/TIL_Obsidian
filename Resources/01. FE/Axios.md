@@ -1,34 +1,16 @@
-  
-
 ## Fetch
-
 ---
-
-  
-
 - 개념 : JS 기본 라이브러리
 - 사용이유 : API 연동을 하기 위해서 사용
 
-  
-
 ### 특징
-
 - promise 객체 반환
 - json으로 바꿔주어야 함 (수동)
 - then, catch, finally  
     : promise의 후속 처리 메서드  
-    
-
-  
-
 ### 문법 구성
-
-  
-
 GET (Default)
-
 - 자원을 가져올 때
-
 ```JavaScript
 fetch("https://jsonplaceholder.typicode.com/posts/1")
   .then((response) => response.json())
@@ -37,12 +19,8 @@ fetch("https://jsonplaceholder.typicode.com/posts/1")
   // 응답 Promise의 body객체를 json형태로 바꾸어 출력
 ```
 
-  
-
 POST
-
 - 자원을 생성할 때
-
 ```JavaScript
 fetch("https://jsonplaceholder.typicode.com/posts", {
   method: "POST", // 메서드 옵션 설정
@@ -60,12 +38,8 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
   
 ```
 
-  
-
 PUT
-
 - 자원 변경을 요청할 때
-
 ```JavaScript
 fetch("https://jsonplaceholder.typicode.com/posts", {
   method: "PUT", // 메서드 옵션 설정
@@ -82,12 +56,9 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
   .then((data) => console.log(data))
 ```
 
-  
 
 DELETE
-
 - 자원을 삭제할 때
-
 ```JavaScript
 fetch("https://jsonplaceholder.typicode.com/posts/1", {
   method: "DELETE",
@@ -97,10 +68,7 @@ fetch("https://jsonplaceholder.typicode.com/posts/1", {
   .then((data) => console.log(data))
 ```
 
-  
-
 예시
-
 ```JavaScript
 fetch('https://jsonplaceholder.typicode.com/todos/1')
  .then(response => response.json())   // 응답을 json으로 변경한 promise 반환 
@@ -109,35 +77,19 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
  })
 ```
 
-  
-
-  
-
 ### 장단점
-
 - 장점
     - 별다른 설치가 필요없음
 - 단점
     - 코드가 길어짐
     - 직관적이지 않음
 
-  
-
 ## Axios
-
 ---
-
-  
-
 - 개념 : Promise 기반 HTTP 비동기 통신 외부 라이브러리
 - 사용이유 : Front - Back 간 통신을 쉽게 하기 위해서  
     Ajax와 함께 사용  
-    
-
-  
-
 ### 특징
-
 - XMLHttpRequest , http api (운영환경에 따라서 사용)
 - ES6 Promise API 사용
 - HTTP Methods 사용
@@ -145,15 +97,7 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
 - HTTP 요청 취소 가능
 - Response JSON형태로 자동 변형
 
-  
-
-  
-
-  
-
 ### 설치
-
-  
 
 ```JavaScript
 $npm install axios
@@ -164,8 +108,6 @@ import axios from 'axios';
 ```
 
 ### 문법 구성
-
-  
 
 |   |   |   |
 |---|---|---|
@@ -200,29 +142,16 @@ axios({
 });
 ```
 
-  
-
 ### 장단점
-
 - 장점  
     1. 많은 기능 지원  
     2. 문법 간소화 → ex) Json 변환 필요없음  
-    
 - 단점  
     설치 필요  
     
-
 → 간단할 때는 Fetch , 복잡할 때는 Axios
-
-  
-
-  
-
 ## Axios Vs Fetch
-
 ---
-
-  
 
 |   |   |   |
 |---|---|---|
@@ -237,20 +166,7 @@ axios({
 |HTTP 요청 가로챔|o|x|
 |다운로드|o|x|
 
-  
-
-## 프로젝트
-
----
-
-  
-
-https://github.com/Dino0204/React-Axios-Fetch-Project
-
-  
-
 ## 참고 자료
-
 - [https://axios-http.com/kr/docs/intro](https://axios-http.com/kr/docs/intro)
 - [https://velog.io/@dusunax/AXIOS란-feat.-React](https://velog.io/@dusunax/AXIOS란-feat.-React)
 - [https://velog.io/@chaeshee0908/React-Axios로-User-데이터-받아-출력하기](https://velog.io/@chaeshee0908/React-Axios로-User-데이터-받아-출력하기)

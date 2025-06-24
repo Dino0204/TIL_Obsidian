@@ -377,7 +377,7 @@ API_URL = http://localhost:9999/
 
 [6) 객체지향 프로그래밍7 - 추상화](https://velog.io/@dev-mage/hello-java-world-oop-abstraction)
 
-[[Next.js 13] 폴더 구조 + 이쁜 잡기술](https://velog.io/@baby_dev/Next.js-13-%ED%8F%B4%EB%8D%94-%EA%B5%AC%EC%A1%B0-%EC%9D%B4%EC%81%9C-%EC%9E%A1%EA%B8%B0%EC%88%A0)
+[Next.js 13 폴더 구조 + 이쁜 잡기술](https://velog.io/@baby_dev/Next.js-13-%ED%8F%B4%EB%8D%94-%EA%B5%AC%EC%A1%B0-%EC%9D%B4%EC%81%9C-%EC%9E%A1%EA%B8%B0%EC%88%A0)
 
 [React + Typescript 프롭스 타입 정의 하기](https://velog.io/@ovogmap/React-Typescript-2)
 
