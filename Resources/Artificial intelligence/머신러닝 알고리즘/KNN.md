@@ -1,4 +1,4 @@
-![[Pasted image 20250525114129.png]]
+ ![[Pasted image 20250525114129.png]]
 
 K Nearest Neighbors
 데이터를 거리를 기반으로 예측하는 [[분류]] 모델
