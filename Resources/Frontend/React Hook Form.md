@@ -14,7 +14,7 @@ React에서 Form을 핸들링하기 위해 만들어진 라이브러리.
 
 설치는 React-Router-Dom 설치처럼 간단하게 할 수 있다.
 
-```SQL
+```bash
 npm install react-hook-form
 ```
 
